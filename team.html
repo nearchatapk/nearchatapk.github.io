@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Our Team - NearChat</title>
+    <link rel="stylesheet" href="team.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <div class="back-button-container">
+      <button class="back-button" onclick="goHome()">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M19 12H6m0 0l6 6m-6-6l6-6" />
+        </svg>
+        <span>Back to Home</span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <h1>Meet our beautiful team</h1>
+        <p>
+          Our philosophy is simple; hire great people and give them the
+          resources and support to do their best work building NearChat.
+        </p>
+      </div>
+
+      <div class="team-carousel-container">
+        <button class="carousel-nav prev" onclick="prevSlide()">‹</button>
+        <button class="carousel-nav next" onclick="nextSlide()">›</button>
+
+        <div class="team-carousel" id="teamCarousel">
+          <div class="team-slide active">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/dev.png"
+                  alt="Dev"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder dev" style="display: none">D</div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Dev</h3>
+                <p class="member-role">Full-Stack Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/bharti.png"
+                  alt="Bharti"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder bharti" style="display: none">
+                  B
+                </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Bharti</h3>
+                <p class="member-role">Backend Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/ishan.png"
+                  alt="Ishan"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder ishan" style="display: none">
+                  I
+                </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Ishan</h3>
+                <p class="member-role">Mobile Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/ishika.png"
+                  alt="Ishika"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder ishika" style="display: none">
+                  I
+                </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Ishika</h3>
+                <p class="member-role">Frontend Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/altamash.jpg"
+                  alt="Altamash"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder altamash" style="display: none">
+                  A
+                </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Altamash</h3>
+                <p class="member-role">DevOps Engineer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/aarav.png"
+                  alt="Aarav"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder aarav" style="display: none">
+                  A
+                </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Aarav</h3>
+                <p class="member-role">QA Engineer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-dots">
+          <div class="dot active" onclick="currentSlide(1)"></div>
+          <div class="dot" onclick="currentSlide(2)"></div>
+          <div class="dot" onclick="currentSlide(3)"></div>
+          <div class="dot" onclick="currentSlide(4)"></div>
+          <div class="dot" onclick="currentSlide(5)"></div>
+          <div class="dot" onclick="currentSlide(6)"></div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "We've been blown away by the support from NearChat team. We suggested
+          an improvement to our chat system and they implemented it in a few
+          days!"
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar"></div>
+          <div class="author-info">
+            <h4>Team ReVolve</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="team.js"></script>
+  </body>
+</html>

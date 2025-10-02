@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NearChat - Connect Without Internet</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" type="image/png" href="app.png" />
+  </head>
+  <body>
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <img src="image/app.png" alt="NearChat Logo" class="logo-img" />
+            <h1>NearChat</h1>
+          </div>
+          <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="#feedback">Feedback</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <ul>
+          <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+          <li><a href="#features" onclick="closeMobileMenu()">Features</a></li>
+          <li><a href="team.html" onclick="closeMobileMenu()">Team</a></li>
+          <li><a href="#feedback" onclick="closeMobileMenu()">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h2>Welcome To NearChat</h2>
+            <p>
+              NearChat uses revolutionary mesh networking technology to keep you
+              connected with people nearby, even when there's no internet or
+              cellular service. Chat, share, and communicate in any situation.
+            </p>
+            <a
+              href="https://www.mediafire.com/file/2pyrksbx6gnb857/NearChat.apk/file"
+              class="download-btn"
+              onclick="downloadApp()"
+            >
+              <i class="fas fa-download"></i>
+              Download NearChat
+            </a>
+          </div>
+          <div class="hero-visual">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="app-interface">
+                  <div class="status-bar">
+                    <span class="time">9:41</span>
+                    <div class="status-icons">
+                      <i class="fas fa-signal"></i>
+                      <i class="fas fa-wifi"></i>
+                      <i class="fas fa-battery-three-quarters"></i>
+                    </div>
+                  </div>
+                  <div class="app-header">
+                    <img src="image/app.png" alt="NearChat" class="app-logo" />
+                    <h3>NearChat</h3>
+                    <div class="connection-status">
+                      <div class="status-dot"></div>
+                      <span>3 nearby devices</span>
+                    </div>
+                  </div>
+                  <div class="chat-preview">
+                    <div class="chat-item">
+                      <div class="chat-avatar">
+                        <i class="fas fa-user"></i>
+                      </div>
+                      <div class="chat-info">
+                        <div class="chat-name">Nearby Peoples</div>
+                        <div class="chat-message">Hey! how are you doing?</div>
+                      </div>
+                      <div class="chat-time">2m</div>
+                    </div>
+                    <div class="chat-item">
+                      <div class="chat-avatar">
+                        <i class="fas fa-users"></i>
+                      </div>
+                      <div class="chat-info">
+                        <div class="chat-name">Local Group</div>
+                        <div class="chat-message">Welcome to the mesh!</div>
+                      </div>
+                      <div class="chat-time">5m</div>
+                    </div>
+                  </div>
+                  <div class="mesh-indicator">
+                    <div class="mesh-nodes">
+                      <div class="node active"></div>
+                      <div class="node active"></div>
+                      <div class="node"></div>
+                      <div class="node active"></div>
+                    </div>
+                    <span class="mesh-text">Mesh Network Active</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title">Powerful Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-wifi"></i>
+            </div>
+            <h3>Mesh Networking</h3>
+            <p>
+              Create a network with nearby devices without internet or cellular
+              connection. Messages hop through multiple devices to reach their
+              destination.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>End-to-End Encrypted</h3>
+            <p>
+              Your messages are secured with military-grade encryption, ensuring
+              privacy and security in all communications.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Group Conversations</h3>
+            <p>
+              Create group chats with people in your mesh network. Perfect for
+              events, emergencies, or just staying connected.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-paper-plane"></i>
+            </div>
+            <h3>Instant Delivery</h3>
+            <p>
+              Messages are delivered instantly through the mesh network, with
+              smart routing to find the best path to recipients.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-battery-full"></i>
+            </div>
+            <h3>Battery Optimized</h3>
+            <p>
+              Designed to minimize battery usage while maintaining strong
+              connections with nearby devices.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Works Anywhere</h3>
+            <p>
+              Perfect for remote areas, natural disasters, large events, or
+              anywhere traditional networks fail.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="feedback">
+      <div class="container">
+        <h2 class="section-title">Send Us Feedback</h2>
+        <form class="feedback-form" onsubmit="submitFeedback(event)">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell us what you think..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i>
+            Send Feedback
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-text">ALL RIGHTS RESERVED © 2025</div>
+      <div class="footer-icons">
+        <a href="#" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+            />
+          </svg>
+        </a>
+        <a href="#" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+            />
+          </svg>
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h3 id="modal-title">Thank You!</h3>
+        <p id="modal-message">Your feedback has been sent successfully.</p>
+        <button class="modal-close" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

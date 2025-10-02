@@ -1,0 +1,579 @@
+/* team.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #1c2a3a 0%, #24364c 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+/* Live Animated Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(
+    45deg,
+    #1c2a3a 0%,
+    #24364c 25%,
+    #1c2a3a 50%,
+    #24364c 75%,
+    #1c2a3a 100%
+  );
+  background-size: 400% 400%;
+  z-index: -2;
+  animation: liveGradient 8s ease infinite;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(36, 54, 76, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(28, 42, 58, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(36, 54, 76, 0.2) 0%,
+      transparent 50%
+    );
+  z-index: -1;
+  animation: floatingOrbs 12s ease-in-out infinite;
+}
+
+@keyframes liveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatingOrbs {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  33% {
+    transform: scale(1.1) rotate(120deg);
+  }
+  66% {
+    transform: scale(0.9) rotate(240deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back Button Styles */
+.back-button-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.back-button:active {
+  transform: translateX(-1px) scale(0.98);
+}
+
+.back-button svg {
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover svg {
+  transform: translateX(-2px);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: #4f7bf7;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #3b5ed6;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Team Carousel Container */
+.team-carousel-container {
+  position: relative;
+  margin: 80px 0;
+  overflow: hidden;
+}
+
+.team-carousel {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  gap: 0;
+}
+
+.team-slide {
+  flex: 0 0 auto;
+  width: 300px;
+  margin: 0 10px;
+  transition: all 0.8s ease;
+}
+
+.team-member {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.member-photo {
+  width: 300px;
+  height: 400px;
+  background: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: all 0.6s ease;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.6s ease;
+  filter: grayscale(100%) brightness(0.7);
+}
+
+/* Active slide styling */
+.team-slide.active .member-photo img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.02);
+}
+
+.team-slide.active {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* Placeholder gradients for photos */
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 300;
+  color: white;
+  transition: all 0.6s ease;
+  filter: grayscale(100%) brightness(0.7);
+}
+
+.team-slide.active .photo-placeholder {
+  filter: grayscale(0%) brightness(1);
+}
+
+.photo-placeholder.dev {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.photo-placeholder.bharti {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+.photo-placeholder.ishan {
+  background: linear-gradient(135deg, #54a0ff 0%, #2e86de 100%);
+}
+.photo-placeholder.ishika {
+  background: linear-gradient(135deg, #5f27cd 0%, #341f97 100%);
+}
+.photo-placeholder.altamash {
+  background: linear-gradient(135deg, #00d2d3 0%, #54a0ff 100%);
+}
+.photo-placeholder.aarav {
+  background: linear-gradient(135deg, #ff9ff3 0%, #f368e0 100%);
+}
+
+.member-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.7)
+  );
+  backdrop-filter: blur(4px);
+  padding: 12px 15px 8px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.team-slide:not(.active) .member-overlay {
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
+}
+
+.member-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 2px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
+  line-height: 1.2;
+}
+
+.member-role {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.9));
+  line-height: 1.2;
+}
+
+/* Navigation dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #4f7bf7;
+  transform: scale(1.2);
+}
+
+/* Navigation arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-size: 1.2rem;
+}
+
+.carousel-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev {
+  left: 20px;
+}
+
+.carousel-nav.next {
+  right: 20px;
+}
+
+/* Testimonial */
+.testimonial {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 50px 40px;
+  text-align: center;
+  max-width: 800px;
+  margin: 80px auto 0;
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.testimonial-text {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 30px;
+  font-style: italic;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f7bf7, #3b5ed6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.author-info h4 {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.author-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 15px;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .team-slide {
+    width: 250px;
+  }
+
+  .member-photo {
+    width: 250px;
+    height: 320px;
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .testimonial {
+    padding: 30px 25px;
+    margin-top: 60px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 200px;
+    justify-content: center;
+  }
+
+  /* Mobile back button adjustments */
+  .back-button-container {
+    top: 15px;
+    left: 15px;
+  }
+
+  .back-button {
+    padding: 10px 16px;
+    font-size: 13px;
+    border-radius: 25px;
+  }
+
+  .back-button span {
+    display: none;
+  }
+
+  .back-button:hover span {
+    display: inline;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-slide {
+    width: 200px;
+    margin: 0 5px;
+  }
+
+  .member-photo {
+    width: 200px;
+    height: 280px;
+  }
+
+  .photo-placeholder {
+    font-size: 3rem;
+  }
+
+  .carousel-nav.prev {
+    left: 10px;
+  }
+
+  .carousel-nav.next {
+    right: 10px;
+  }
+
+  /* Mobile back button - show only icon */
+  .back-button-container {
+    top: 10px;
+    left: 10px;
+  }
+
+  .back-button {
+    padding: 10px;
+    border-radius: 50%;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .back-button span {
+    display: none;
+  }
+}
+
+/* Touch targets for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .back-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
