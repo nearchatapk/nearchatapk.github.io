@@ -51,13 +51,6 @@ Fast, private, and easy to use.
 
 ---
 
-## 🖼️ Image Shortcuts
-
-You can share images easily within the chat:
-- Tap the 📎 (attachment) icon or use your keyboard’s image shortcut.  
-- Images are transferred directly through the peer-to-peer connection — secure and fast.
-
----
 
 ## 👨‍💻 Developer
 
