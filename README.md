@@ -1,4 +1,4 @@
-📢 NearChat v1.0.0
+# 📢 NearChat v1.0.0
 
 We’re excited to announce the first public release of NearChat 🎉 – a BLE Mesh Networking & Peer-to-Peer Chat Application designed for offline communication without internet or cellular networks.
 
