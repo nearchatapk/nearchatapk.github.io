@@ -1,52 +1,64 @@
-# 📢 NearChat v1.0.0
+# 📱 NearChat – Peer-to-Peer Chat App
 
-We’re excited to announce the first public release of NearChat 🎉 – a BLE Mesh Networking & Peer-to-Peer Chat Application designed for offline communication without internet or cellular networks.
+**NearChat** lets you chat with nearby devices — with or without an internet connection!  
+Fast, private, and easy to use.
 
-✨ Key Features
+---
 
-📡 Peer-to-Peer Messaging – Connect directly with nearby devices using Bluetooth Low Energy (BLE).
+## 🚀 Download & Install
 
-🔗 Mesh Networking – Messages can hop across multiple devices, extending communication range.
+1. Download the latest APK:  
+   👉 [**Download NearChat v1.0.0**](https://github.com/nearchatapk/nearchatapk.github.io/releases/download/1.0.0/Nearchat.apk)
 
-📴 Offline Chatting – Works even without Wi-Fi or mobile data.
+2. Install the app on your Android device.  
+   *(If you see a “Play Protect” warning, tap **Install anyway** — it’s safe.)*
 
-⚡ Low Latency – Fast and efficient text delivery over BLE.
+3. If you’re installing offline, **grant all permissions** for better connectivity and battery optimization.
 
-🔒 Secure Connections – Encrypted peer-to-peer communication.
+---
 
-🌐 Scalable Mesh – More devices = stronger and wider network coverage.
+## 🌐 Works Both Online & Offline
 
-🛠 Fixes & Improvements
+- **Online:** Uses your internet connection to discover and chat with peers.  
+- **Offline:** Works via BLE  — no internet required!
 
-Optimized BLE scanning & connection stability.
+---
 
-Reduced message delays in larger mesh networks.
+## 💬 How to Use NearChat
 
-Fixed onboarding UI issues.
+1. **Open the app** – you’ll see the *NearChat* main screen.  
+2. **Enter the chat section** – tap the message box at the bottom to start chatting.  
+3. At the **top-right corner**, you’ll see:  
+   📶 `2 devices` → shows the number of **active peers nearby**.  
+   - Tap it to view active members and their nicknames.
 
-Improved accessibility & keyboard navigation.
+---
 
-🚀 Getting Started
+## ⚙️ Chat Commands
 
-Download the app or clone the repo.
+| Command | Example | Description |
+|----------|----------|-------------|
+| `/block [nickname]` | `/block user1` | Block or list blocked peers |
+| `/channels` | – | Show all discovered channels |
+| `/clear` | – | Clear chat messages |
+| `/hug <nickname>` | `/hug user1` | Send someone a warm hug 🤗 |
+| `/j, /join <channel>` | `/join general` | Join or create a channel |
+| `/m, /msg <nickname> [message]` | `/msg user1 hello!` | Send private message |
+| `/name <newname>` | `/name Dev` | Change your display name |
+| `/slap <nickname>` | `/slap user1` | Slap someone with a trout 🐟 |
+| `/unblock <nickname>` | `/unblock user1` | Unblock a peer |
+| `/w` | – | See who’s online |
 
-Pair your devices via BLE (no internet required).
+---
 
-Start chatting peer-to-peer or across the mesh network.
+## 🖼️ Image Shortcuts
 
-📌 Notes
+You can share images easily within the chat:
+- Tap the 📎 (attachment) icon or use your keyboard’s image shortcut.  
+- Images are transferred directly through the peer-to-peer connection — secure and fast.
 
-This is the initial stable release (v1.0.0).
+---
 
-Upcoming versions will include:
-
-File sharing over mesh
-
-Push-style local notifications
-
-Group chat & broadcast support
-
-Enhanced mesh routing algorithms
 ## 👨‍💻 Developer
 
 <p align="center">
@@ -59,3 +71,12 @@ Enhanced mesh routing algorithms
   Developed by <a href="https://github.com/devchauhann"><b>Dev Chauhan</b></a> 🚀  
 </p>
 
+---
+
+### 🧠 Notes
+- Works best when all nearby devices have **Wi-Fi and location permissions** enabled.  
+- No account or login required — instant local connection.  
+
+---
+
+**Enjoy chatting securely with NearChat!**
