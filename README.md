@@ -47,3 +47,15 @@ Push-style local notifications
 Group chat & broadcast support
 
 Enhanced mesh routing algorithms
+## 👨‍💻 Developer
+
+<p align="center">
+  <a href="https://github.com/devchauhann">
+    <img src="https://github.com/devchauhann.png?size=120" width="120" style="border-radius:50%;" alt="Dev Chauhan’s GitHub Avatar"/>
+  </a>
+</p>
+
+<p align="center">
+  Developed by <a href="https://github.com/devchauhann"><b>Dev Chauhan</b></a> 🚀  
+</p>
+
